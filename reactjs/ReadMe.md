@@ -113,7 +113,6 @@ react-boilerplate/
 Example usage in a component:
 ```jsx
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../store/reducers";
 
 const Counter = () => {
   const count = useSelector((state) => state.example.count);
