@@ -1,0 +1,33 @@
+# User API Endpoints Testing Commands
+
+# 1. Create a new user (POST)
+curl -X POST http://localhost:8001/api/users \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password123"
+  }'
+
+# 2. Get all users (GET)
+curl http://localhost:8001/api/users
+
+# 3. Get a single user by ID (GET)
+# Replace {userId} with an actual user ID
+curl http://localhost:8001/api/users/{userId}
+
+# 4. Update a user (PUT)
+# Replace {userId} with an actual user ID
+curl -X PUT http://localhost:8001/api/users/{userId} \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Updated",
+    "email": "john.updated@example.com"
+  }'
+
+# 5. Delete a user (DELETE)
+# Replace {userId} with an actual user ID
+curl -X DELETE http://localhost:8001/api/users/{userId}
+
+# Note: Make sure the server is running on port 8001 before testing these endpoints
+# The base URL assumes localhost:8001, adjust if your server runs on a different host or port
