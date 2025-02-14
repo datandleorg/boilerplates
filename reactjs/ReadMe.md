@@ -116,13 +116,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../store/reducers";
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter.count);
+  const count = useSelector((state) => state.example.count);
   const dispatch = useDispatch();
 
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch({
+            type: "INCREMENT",
+            payload: 1
+          })}>
+          Increment</button>
     </div>
   );
 };
