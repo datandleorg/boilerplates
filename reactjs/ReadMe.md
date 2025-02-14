@@ -122,11 +122,9 @@ const Counter = () => {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => dispatch({
-            type: "INCREMENT",
-            payload: 1
-          })}>
-          Increment</button>
+      <button onClick={() => dispatch({ type: "INCREMENT", payload: 1})}>
+          Increment
+      </button>
     </div>
   );
 };
